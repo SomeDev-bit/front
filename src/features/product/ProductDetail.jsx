@@ -159,7 +159,7 @@ export const AddCart = ({ product }) => {
 
       </table>
       <div className='flex justify-center pt-7'>
-        <Button disabled={user?.isAdmin || !user} onClick={handleSubmit}>Add To Cart</Button>
+        <Button disabled={user?.role === 'admin' || !user} onClick={handleSubmit}>Add To Cart</Button>
       </div>
     </Card>
   )
